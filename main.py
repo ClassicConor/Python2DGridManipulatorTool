@@ -13,19 +13,16 @@ arrays = [
     ]
 
 arrays2 = [
-    ["a", 2, "a", "2", "c"],
-    ["a", "b", 3, 5, 1],
-    ["a", "b", 0, "1", "a"],
-    ["a", "b", 0, "1", "a"],
-    ["a", "b", 0, "1", "a"],
+    ["a", "b", "c", "d", "e", None],
+    ["f", "g", "h", "i", "j"],
+    ["k", "l", "m", "n"],
+    ["p", "q", "r", "s", "t"],
+    ["u", "v", "w", "x", "y"]
 ]
 
 tool1 = at(arrays2)
 
-adjacentStrings = tool1.getRowAdjacentPerimeterStrings(2, 2, 2, arrays2)
-
-for string in adjacentStrings:
-    print(string)
+tool1.advancedColumnRolling(1, 4, skipEmpty=False)
 
 sys.exit()
 

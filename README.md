@@ -30,25 +30,27 @@ Then, you can call various methods on the tool instance to perform operations on
 This introduction provides context for the class, explains its purpose, and gives a brief example of how to initialize it. You can place this section at the beginning of the document, followed by the list of methods and their descriptions.
 
 
-```markdown
+
 # TwoDArrayTool Methods
 
 - `printMainArray()`: Prints the main array.
-  ```python
+
+```python
   tool.printMainArray()
   # [1, 2, 3]
   # [4, 5, 6]
   # [7, 8, 9]
-  ```
+```
 
 - `viewArrays()`: Displays all saved arrays.
 
 - `getArrays()`: Returns list of saved arrays.
 
 - `addArray(array)`: Adds new array to saved arrays.
-  ```python
-  tool.addArray([[1, 2], [3, 4]])
-  ```
+
+```python
+tool.addArray([[1, 2], [3, 4]])
+```
 
 - `removeArray()`: Removes array from saved arrays (prompts for input).
 

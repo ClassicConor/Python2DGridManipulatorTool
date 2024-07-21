@@ -8,38 +8,36 @@ arrays = [
     [9, 10, 11, 4, 1, 2],
     ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"],
     [True, None],
-    [3.4, 2.1, 99.8, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7],
-    ["fff", True],
+    [3.4, "nah", "b", "o", "i", 0.3, 0.4, 0.5, 0.6, 0.7],
+    ["fff", True, "f", "a", "d"],
     ]
 
 arrays2 = [
-    ["a", "b", "c", "d", "e", None],
-    ["f", "g", "h", "i", "j"],
-    ["k", "l", "m", "n"],
-    ["p", "q", "r", "s", "t"],
-    ["u", "v", "w", "x", "y"]
+    [0, 1, 2, 4, 4, 5, 2, 2, 5],
+    [3, 4, 5, 4, 5],
+    [6, 7, 8, 7.4, 3],
+    [9, 10, 11, 4, 1, 2],
+    ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"],
 ]
 
-tool1 = at(arrays2)
+# arrays = None
 
-tool1.advancedColumnRolling(1, 4, skipEmpty=False)
+def main():
 
-sys.exit()
+    tool1 = at(arrays)
 
-tool = at(arrays)
+    # tool1.addArray()
+    # tool1.setPrimaryArray()
 
-adjacentItems = tool.get2DAdjacent(2, 2, 2, flat=True)
+    adjacentStrings = tool1.advancedColumnRolling(1, 3, skipEmpty=False)
 
-for item in adjacentItems:
-    print(item)
+    # dataTypes = tool1.getDataTypeCount()
+    # print("Data Types", dataTypes)
 
-dataTypes = tool.getDataTypeCount(adjacentItems)
+    # finalList = tool1.get1DAdjacentRow(row=3, col=3, leftLength=5, rightLength=20)
+    # print("Final List", *finalList, sep="\n")
 
-dataTypePerRow = tool.getDataTypeCountPerRow()
+    sys.exit()
 
-print(dataTypePerRow)
-
-for i, row in enumerate(dataTypePerRow):
-    for key, value in row.items():
-        print(f"Row {i}:")
-        print(f"{key} - {value}")
+if __name__ == "__main__":
+    main()

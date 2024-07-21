@@ -334,21 +334,7 @@ class TwoDArrayTool:
                     finalList[-1].append(None)
 
         return finalList
-    
-    def getDataTypeCount(self, array=None):
-        """
-        Get the count of each data type in an array
-        """
 
-        array = self.__checkIfArrayNone(array)
-        array = self.__checkIfTwoDArray(array)
-
-        flatArray = self.flattenArray(array)
-
-        dataTypes = self.__getTypesPerRow(flatArray)
-
-        return dataTypes
-    
     def __getTypesPerRow(self, array=None):
         """
         Get the count of each data type in the array        

@@ -29,7 +29,11 @@ def main():
     # tool1.addArray()
     # tool1.setPrimaryArray()
 
-    adjacentStrings = tool1.advancedColumnRolling(1, 3, skipEmpty=False)
+    allDataTypes = tool1.getAllDataTypeCount()
+    print("All Data Types", allDataTypes)
+
+    allDataTypes2 = tool1.getDataTypeCount()
+    print("All Data Types 2", allDataTypes2)
 
     # dataTypes = tool1.getDataTypeCount()
     # print("Data Types", dataTypes)
